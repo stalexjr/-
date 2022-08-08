@@ -452,6 +452,7 @@ Windows 시스템인 경우
 별찍기 
 
 for문을 사용하여 *을 찍어보자
+
 	*
 	**
 	***
@@ -513,25 +514,25 @@ for문을 사용하여 *을 찍어보자
          **
           *
 
-for(let i = 0; i<5; i++){
- console.log(' '.repeat(i) + '*'.repeat(5 - i));
-}
+	for(let i = 0; i<5; i++){
+	 console.log(' '.repeat(i) + '*'.repeat(5 - i));
+	}
 
-for(let i = 0; i<5; i++){
- console.log(' '.repeat(5 - i) + '*'.repeat(i + 1));
-}
-
-
-for(let i = 0; i < 5; i++){
-    if(i < 3){
-        console.log(' '.repeat(2-i) + '*'.repeat(2*i + 1) + ' '.repeat(2-i));    
-    }else{
-        console.log(' '.repeat(i-2) + '*'.repeat(9-2*i) + ' '.repeat(i-2));
-    }
-    
-}
+	for(let i = 0; i<5; i++){
+	 console.log(' '.repeat(5 - i) + '*'.repeat(i + 1));
+	}
 
 
-for ( let i = 0; i < 5; i++) {
-console.log(' '.repeat(4-i),'*'.repeat(i*2 + 1),' '.repeat(4-i))
-}
+	for(let i = 0; i < 5; i++){
+	    if(i < 3){
+		console.log(' '.repeat(2-i) + '*'.repeat(2*i + 1) + ' '.repeat(2-i));    
+	    }else{
+		console.log(' '.repeat(i-2) + '*'.repeat(9-2*i) + ' '.repeat(i-2));
+	    }
+
+	}
+
+
+	for ( let i = 0; i < 5; i++) {
+	console.log(' '.repeat(4-i),'*'.repeat(i*2 + 1),' '.repeat(4-i))
+	}

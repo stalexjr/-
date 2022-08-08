@@ -8,7 +8,7 @@
 
 #
 
-title.addEventListener("click", handleTitleClick);
+	title.addEventListener("click", handleTitleClick);
 위 구조를 보면
 HTML element( 요소 )를 가져와서 addEventListener / function을 실행 시켜주면 되는데
 이곳에 어떤 event를 listen하고 싶은지 명시해줘야한다. 
@@ -48,8 +48,8 @@ preventDefalut(); : 어떤 event의 기본 행동이든지 발생되지 않도�
 
 #
 
-greeting.innerText = "Hello " + username;
-greeting.innerText = `Hello ${username}`;
+	greeting.innerText = "Hello " + username;
+	greeting.innerText = `Hello ${username}`;
 
 ▼▼▼ 위에 있는 코드의 차이점
 
@@ -72,17 +72,17 @@ greeting.innerText = `Hello ${username}`;
 
 #
 
-localStorage.setItem("username", username); 
+	localStorage.setItem("username", username); 
 
 ▼▼▼
 
 앞은 key값, ( 저장될 아이템의 이름 )이고 뒤는 value ( 변수 )값이다.
 
 
-function paintGreetings(username){
-    greeting.innerText = `Hello ${username}`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
-}
+	function paintGreetings(username){
+	    greeting.innerText = `Hello ${username}`;
+	    greeting.classList.remove(HIDDEN_CLASSNAME);
+	}
 
 
 ▼▼▼
@@ -229,15 +229,15 @@ filter는 함수를 부르고 배열에 함수가 차례대로 실행된다.
 
 ▼▼▼
 
-function anyFunction(){
+	function anyFunction(){
 
-}
+	}
 
-1, 2, 3, 4에 anyFunction이 차례대로 실행 된다.
+	1, 2, 3, 4에 anyFunction이 차례대로 실행 된다.
 
 ▼▼▼
 
-[1, 2 , 3 , 4].filter(anyFunction)
+	[1, 2 , 3 , 4].filter(anyFunction)
 
 filter는 anyFunction에서 1, 2, 3, 4를 넣어서 부른다 anyFunction만 호출 되지 않는다.
 anyFunction에 1, 2, 3, 4 를 호출하게 된다.
@@ -255,11 +255,11 @@ javascript가 이렇게 할 것이다.
 
 ▼▼▼
 
-anyFunction(1) = 1 그리고 true를 리턴하면 javascript는 1을 유지할 것이다.
-		2, 3, 4도 true면 유지 된다.
-anyFunction(2) = 2
-anyFunction(3) = 2
-anyFunction(4) = 4
+	anyFunction(1) = 1 그리고 true를 리턴하면 javascript는 1을 유지할 것이다.
+			2, 3, 4도 true면 유지 된다.
+	anyFunction(2) = 2
+	anyFunction(3) = 2
+	anyFunction(4) = 4
 
 그리고 새로 만들어지는 array 안에 1,2,3,4가 있다.
 하지만 만약 3번째 단계에서 false를 리턴하면 javascript는 3을 빼고 1, 2, 4만 유지할 것이다.
@@ -307,12 +307,13 @@ response.json()은 이게 JSON이다.
 
 ▼▼▼
 
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
 
-fetch(url).then(Response => Response.json()).then(data =>{
-        console.log(data.name, data.weather[0].main);
-    });
-}
+	const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+
+	fetch(url).then(Response => Response.json()).then(data =>{
+		console.log(data.name, data.weather[0].main);
+	    });
+	}
 
 #
 
@@ -320,13 +321,13 @@ fetch(url).then(Response => Response.json()).then(data =>{
 
 #
 
-const h1 = document.querySelector("div.hello:first-child h1");
+	const h1 = document.querySelector("div.hello:first-child h1");
 
-function handleTitleClick(){
-   h1.classList.toggle("clicked");
-}
+	function handleTitleClick(){
+	   h1.classList.toggle("clicked");
+	}
 
-h1.addEventListener("click", handleTitleClick);
+	h1.addEventListener("click", handleTitleClick);
 
 ▼▼▼
 
@@ -345,9 +346,11 @@ contains는 HTML element의 class에 포함되어 있는지 말해준다는 것�
 
 #
 
-const loginForm = document.getElementById("login-form");
-const loginInput = loginForm.querySelector("input");
-const loginButton = loginForm.querySelector("button");
+
+	const loginForm = document.getElementById("login-form");
+	const loginInput = loginForm.querySelector("input");
+	const loginButton = loginForm.querySelector("button");
+
 
 ▼▼▼  위에 있는 코드를 더 짧게 줄이는 방법
 
@@ -359,13 +362,13 @@ const loginButton = loginForm.querySelector("button");
 
 arr = ['나', '다', '라', '마', '바'];
 
-arr.unshift('가') // 배열데이터 맨 앞에 넣기
-arr.push('사'); // 배열데이터 맨 뒤에 넣기 
-arr.pop(); // 배열데이터 맨 뒤 삭제
-arr.splice(1,1) // 앞에는 배열데이터 인덱스, 그리고 뒤 숫자는 지우고 싶은 개수
-arr.includes('다'); // 배열데이터 안에 '다'라는 데이터가 들어있는지 확인하는 방법 결과값은 true false 다.
-arr.indexOf('다'); // 배열데이터 위치를 정확히 알려준다 결과값 1.
-arr.lastIndexOf('라')
+	arr.unshift('가') // 배열데이터 맨 앞에 넣기
+	arr.push('사'); // 배열데이터 맨 뒤에 넣기 
+	arr.pop(); // 배열데이터 맨 뒤 삭제
+	arr.splice(1,1) // 앞에는 배열데이터 인덱스, 그리고 뒤 숫자는 지우고 싶은 개수
+	arr.includes('다'); // 배열데이터 안에 '다'라는 데이터가 들어있는지 확인하는 방법 결과값은 true false 다.
+	arr.indexOf('다'); // 배열데이터 위치를 정확히 알려준다 결과값 1.
+	arr.lastIndexOf('라')
 
 #
 
@@ -398,19 +401,19 @@ ex) h1.classList.toggle("clicked");
 ex) '2ca' 'c a' 'c-a' 
 
 
-const woojin = {
-    name : 'woojin',
-    year : 1996,
-    month : 10,
-    dete: 31,
-    gender : 'M',
-};
+	const woojin = {
+	    name : 'woojin',
+	    year : 1996,
+	    month : 10,
+	    dete: 31,
+	    gender : 'M',
+	};
 
 
-woojin.gender
-'M'
-woojin['gender']
-'M'
+	woojin.gender
+	'M'
+	woojin['gender']
+	'M'
 
 obj의 값을 받아오는 두 방법이다. 왜 방법이 두가지냐면 위에 woojin.gender 
 이 방법은 만약 obj를 'name' : 'wojin' 이랬을 경우 위에 방법으로는 값을 못 가져온다.
@@ -438,63 +441,64 @@ Windows 시스템인 경우
 이중 조건문을 사용하면 된다.
 
 
-for(let i =0; i < 10; i++){
-for(let j =0; j <10; j++){
-if(i % 2 ===0 || j % 2 ===0)continue;
-console.log(i,'x',j ,'=', i * j);
-}   
-}
+	for(let i =0; i < 10; i++){
+	for(let j =0; j <10; j++){
+	if(i % 2 ===0 || j % 2 ===0)continue;
+	console.log(i,'x',j ,'=', i * j);
+	}   
+	}
 하면 결과값이 제대로 나온다.
 
 별찍기 
 
 for문을 사용하여 *을 찍어보자
-*
-**
-***
-****
-***** 한번 찍어보기
+	*
+	**
+	***
+	****
+	***** 
 
-for(let i = 0; i <10; i++){
-  console.log('*'.repeat(i));
-}
+
+	for(let i = 0; i <10; i++){
+  	console.log('*'.repeat(i));
+	}
 
 반대로 찍어보기
 
-*****
-****
-***
-**
-*
+	*****
+	****
+	***
+	**
+	*
 
-for(let i =0; i <5; i++){
- console.log('*'.repeat(5- i));
-}
+	for(let i =0; i <5; i++){
+	 console.log('*'.repeat(5- i));
+	}
 
 
-*********
-*******
-*****
-***
-*
+	*********
+	*******
+	*****
+	***
+	*
 
-*
-***
-*****
-*******
-********* 
+	*
+	***
+	*****
+	*******
+	********* 
 
 1,3,5,7,9 개를 찍어보자 
 
-for(let i = 0; i<10; i++){
- if(i % 2 ===0)continue;
- console.log('*'.repeat(i));
-}
+	for(let i = 0; i<10; i++){
+	 if(i % 2 ===0)continue;
+ 	console.log('*'.repeat(i));
+	}
 
-for(let i = 0; i<10; i++){
- if(i % 2 ===0)continue;
- console.log('*'.repeat(10 - i));
-}
+	for(let i = 0; i<10; i++){
+ 	if(i % 2 ===0)continue;
+ 	console.log('*'.repeat(10 - i));
+	}
 
 앞의 공백을 만들어서 별을 찍어보자
 
@@ -518,12 +522,6 @@ for(let i = 0; i<5; i++){
 }
 
 
-  *
- ***
-*****
- ***
-  *
-
 for(let i = 0; i < 5; i++){
     if(i < 3){
         console.log(' '.repeat(2-i) + '*'.repeat(2*i + 1) + ' '.repeat(2-i));    
@@ -533,12 +531,6 @@ for(let i = 0; i < 5; i++){
     
 }
 
-
-    *
-   ***
-  *****
- *******
-*********
 
 for ( let i = 0; i < 5; i++) {
 console.log(' '.repeat(4-i),'*'.repeat(i*2 + 1),' '.repeat(4-i))

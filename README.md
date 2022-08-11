@@ -536,3 +536,10 @@ for문을 사용하여 *을 찍어보자
 	for ( let i = 0; i < 5; i++) {
 	console.log(' '.repeat(4-i),'*'.repeat(i*2 + 1),' '.repeat(4-i))
 	}
+
+
+#
+
+<h4>메모리 할당</h4>
+
+#

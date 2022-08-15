@@ -27,7 +27,7 @@ event를 listen할 때 가장 좋은 방법은 구글에 찾고싶은 element의
 
 <h4>form 안에 input 이 들어가야 제 기능을 다한다.</h4>
 
-#
+# 
 
 input 안에 있는 button을 누르거나 type이 submit인 input을 클릭하면
 form이 submit한다.

@@ -8,6 +8,7 @@
 
 #
 
+
 	title.addEventListener("click", handleTitleClick);
 위 구조를 보면
 HTML element( 요소 )를 가져와서 addEventListener / function을 실행 시켜주면 되는데

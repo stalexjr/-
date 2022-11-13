@@ -562,11 +562,11 @@ splice는 기존 배열에 영향을 주고 처음에는 인덱스번호 두번�
 
 #
 
-for(let i = 0; i < winBalls.length; i++){
-  setTimeout(() =>{
-    showBall(winBalls[i], $result); 
-  }, (i + 1) * 1000);
-}
+		for(let i = 0; i < winBalls.length; i++){
+		  setTimeout(() =>{
+		    showBall(winBalls[i], $result); 
+		  }, (i + 1) * 1000);
+		}
 
 위 코드를 보았을 때 let과 var의 차이점은 
 var은 함수 스코프고
@@ -578,13 +578,13 @@ var으로 위 코드 처럼 작성할 시 i값이 고정되지 않아 문제가 
 var으로 반복문을 작성할 시 클로저를 사용하면 된다.
 var는 함수 스코프이기 때문에 함수를 만들어줘야한다.
 
-for (var i = 0; i < winBalls.length; i++){
-  (function(j) {
-    setTimeout(() =>{
-    showBall(winBalls[j], $result); 
-    }, (i + 1) * 1000);
-  })(i);
-}
+		for (var i = 0; i < winBalls.length; i++){
+		  (function(j) {
+		    setTimeout(() =>{
+		    showBall(winBalls[j], $result); 
+		    }, (i + 1) * 1000);
+		  })(i);
+		}
 
 함수를 바로 호출하는 방법은 함수를 소괄호로 감싸고 매개변수로 호출하면된다.
 

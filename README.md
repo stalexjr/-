@@ -644,3 +644,24 @@ html의 현상이다. 부모타고 계속 공기방울이 올라가는 것처럼
 보통 이벤트 캡처링을 사용할 때는 팝업이 대표적인 예시가 된다.
 팝업같은 경우 바깥쪽을 클릭하면 팝업의 부모요소인데, 이거를 이벤트 캡처링을 하면 부모를 클릭했을 때 팝업으로 클릭이벤트가 전달이 된다. useCapture의 기본값은 false이기때문에 true로 바꿔주면 캡처링을 사용할 수 있다. 예로 $table.addEventListener('click', callback, true); 
 이렇게 사용해주면 된다.
+
+
+#
+
+<h4>forEach문</h4>
+
+#
+
+/forEach 문
+
+answer.forEach((element, i)=>{
+ const index = value.indexOf(answer[i]);
+ if(index > -1){ // 일치하는 숫자 발견
+   if(index === i){ // 자릿수도 같음
+     strike += 1;
+   }else{ // 숫자만 같음
+     ball += 1;
+   }
+  }
+})
+

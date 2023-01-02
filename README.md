@@ -652,16 +652,23 @@ html의 현상이다. 부모타고 계속 공기방울이 올라가는 것처럼
 
 #
 
-/forEach 문
+forEach 문
 
-answer.forEach((element, i)=>{
- const index = value.indexOf(answer[i]);
- if(index > -1){ // 일치하는 숫자 발견
-   if(index === i){ // 자릿수도 같음
-     strike += 1;
-   }else{ // 숫자만 같음
-     ball += 1;
-   }
-  }
-})
+		answer.forEach((element, i)=>{
+		 const index = value.indexOf(answer[i]);
+		 if(index > -1){ // 일치하는 숫자 발견
+		   if(index === i){ // 자릿수도 같음
+		     strike += 1;
+		   }else{ // 숫자만 같음
+		     ball += 1;
+		   }
+		  }
+		})
+		
+		
+#
+
+<h4>parentNode, children, Array.from,</h4>
+
+#
 
